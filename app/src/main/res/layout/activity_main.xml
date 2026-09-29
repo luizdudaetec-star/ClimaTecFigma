@@ -1,19 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Weather App"
+        android:textSize="28sp"
+        android:textColor="#6E73D7"
+        android:layout_marginBottom="40dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latitude"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edtLatitude"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Value"
+        android:inputType="numberDecimal|numberSigned"
+        android:backgroundTint="#6E73D7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Longitude"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp" />
+
+    <EditText
+        android:id="@+id/edtLongitude"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Value"
+        android:inputType="numberDecimal|numberSigned"
+        android:backgroundTint="#6E73D7" />
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="35dp"
+        android:text="📍  buscar"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#D24343" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="65dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtTemperatura"
+                android:layout_width="95dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="20°C"
+                android:background="#DDDEF8"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Umidade"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtUmidade"
+                android:layout_width="95dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="85%"
+                android:background="#DDDEF8"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="45dp"
+        android:text="Pressão Atmosférica"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtPressao"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="1018 hPa"
+        android:background="#DDDEF8"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
